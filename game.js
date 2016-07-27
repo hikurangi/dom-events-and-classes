@@ -21,8 +21,7 @@ function makeGreen (evt) {
   evt.preventDefault()
   evt.target.classList.toggle('green')
   // remove other colour classes so the count remains accurate and for loop + if else works in updateCounts();
-  evt.target.classList.remove('blue')
-  evt.target.classList.remove('invisible')
+  evt.target.classList.remove('blue', 'invisible')
   updateCounts()
 }
 
@@ -33,8 +32,7 @@ function makeBlue (evt) {
   evt.preventDefault()
   evt.target.classList.toggle('blue')
   // remove other colour classes as explained above
-  evt.target.classList.remove('green')
-  evt.target.classList.remove('invisible')
+  evt.target.classList.remove('green', 'invisible')
   updateCounts()
 }
 
@@ -43,8 +41,7 @@ function hide (evt) {
   evt.preventDefault()
   evt.target.classList.toggle('invisible')
   // remove other colour classes as explained above
-  evt.target.classList.remove('blue')
-  evt.target.classList.remove('green')
+  evt.target.classList.remove('blue', 'green')
   updateCounts()
 }
 
