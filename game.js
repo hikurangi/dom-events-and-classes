@@ -20,7 +20,7 @@ function bindEventListeners (dots) {
 function makeGreen (evt) {
   evt.preventDefault()
   evt.target.classList.toggle('green')
-  // remove other colour classes so the count remains accurate and for loop + if else works in updateCounts();
+  // remove other colour classes so the count remains accurate and for loop + if else works in updateCounts();. I should come up with some clever way of automating the removal of other classes on the DRY principle, but i suspect that would actually result in more code
   evt.target.classList.remove('blue', 'invisible')
   updateCounts()
 }
